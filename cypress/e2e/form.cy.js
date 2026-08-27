@@ -60,9 +60,12 @@ describe('Formulario',()=>{
     cy.login('4DM@gmail.com', '4DM')
     cy.contains('button','Formulário').should('be.visible').click()
     cy.contains('button', 'Enviar formulário').click()
-    cy.contains('Digite nome e sobrenome').should('be.visible')
-    cy.contains('Informe um email válido').should('be.visible')
-    cy.contains('Você precisa aceitar os termos de uso').should('be.visible')
+
+    cy.contains('Digite nome e sobrenome').should('be.visible').and('have.css','color','rgb(248, 113, 113)')
+
+    cy.contains('Informe um email válido').should('be.visible').and('have.css','color','rgb(248, 113, 113)')
+    
+    cy.contains('Você precisa aceitar os termos de uso').should('be.visible').and('have.css','color','rgb(248, 113, 113)')
      
 
     })
