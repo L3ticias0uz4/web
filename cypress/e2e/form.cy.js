@@ -38,7 +38,8 @@ describe('Formulario',()=>{
         ]
         
         Tecnologias.forEach((Tecnologias) => {
-            cy.get('#technologies').type(Tecnologias+'{enter}');
+            cy.get('#technologies').type(Tecnologias + '{enter}')
+            .should('be.visible')
         });
 
     })
