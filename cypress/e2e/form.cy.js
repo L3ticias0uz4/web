@@ -15,9 +15,20 @@ describe('Formulario',()=>{
 
         cy.contains('label', 'Pessoa Física').find('input[type="radio"]').should('be.not.checked')
 
-        cy.contains('label', 'Udemy').find('input[type=checkbox]').click().should('be.checked')
+      //  cy.contains('label', 'Udemy').find('input[type=checkbox]').click().should('be.checked')
 
-        const sociais = ['Instagram', 'Linkedin', 'Udemy', 'Youtube', 'Indicação de Amigos']
+        const sociais = [
+            'Instagram',
+            'LinkedIn',
+            'Udemy',
+            'YouTube',
+            'Indicação de Amigo'
+                ]
+        sociais.forEach((social) => {
+            cy.contains('label', social)
+            .find('input[type=checkbox]').click()
+            .should('be.checked')
+        })
 
     })
 })
