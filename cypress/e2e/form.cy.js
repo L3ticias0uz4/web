@@ -31,6 +31,7 @@ describe('Formulario',()=>{
         })
 
         cy.get('input[type="file"').selectFile('./cypress/fixtures/images.jpg' , {force: true})
+        cy.contains('span', 'images.jpg').should('be.visible')
 
         const Tecnologias = [
             'JavaScript',
