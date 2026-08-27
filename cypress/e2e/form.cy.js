@@ -30,6 +30,8 @@ describe('Formulario',()=>{
             .should('be.checked')
         })
 
+        cy.get('input[type="file"').selectFile('./cypress/fixtures/images.jpg' , {force: true})
+
         const Tecnologias = [
             'JavaScript',
             'Python',
