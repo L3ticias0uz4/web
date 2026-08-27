@@ -29,6 +29,7 @@ describe('Formulario',()=>{
             .find('input[type=checkbox]').click()
             .should('be.checked')
         })
+        
 
     })
 })
