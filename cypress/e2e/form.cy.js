@@ -17,5 +17,7 @@ describe('Formulario',()=>{
 
         cy.contains('label', 'Udemy').find('input[type=checkbox]').click().should('be.checked')
 
+        const sociais = ['Instagram', 'Linkedin', 'Udemy', 'Youtube', 'Indicação de Amigos']
+
     })
 })
